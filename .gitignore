@@ -1,0 +1,15 @@
+# GameMaker temporary/build output
+.temp/
+.tmp/
+*.win
+*.zip
+*.yydebug
+
+# IDE and OS clutter
+.vs/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local package/cache folders
+node_modules/
