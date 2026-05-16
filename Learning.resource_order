@@ -5,7 +5,12 @@
     {"name":"Rooms","order":6,"path":"folders/Rooms.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_dialogue","order":3,"path":"objects/obj_dialogue/obj_dialogue.yy",},
+    {"name":"obj_init","order":2,"path":"objects/obj_init/obj_init.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
+    {"name":"rm_init","order":1,"path":"rooms/rm_init/rm_init.yy",},
+    {"name":"spr_npc_tut","order":2,"path":"sprites/spr_npc_tut/spr_npc_tut.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
+    {"name":"spr_woodcutting_trainer","order":3,"path":"sprites/spr_woodcutting_trainer/spr_woodcutting_trainer.yy",},
   ],
 }
