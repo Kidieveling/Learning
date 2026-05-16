@@ -1,7 +1,7 @@
-sprite_index = spr_woodcutting_trainer;
-npc_name = "Woodcutting Trainer";
-npc_text = "Want to learn about woodcutting?";
-dialogue_text = npc_name + ": " + npc_text;
+sprite_index = spr_woodcutting_trainer
+npc_name = "Woodcutting Trainer"
+npc_text = "Want to learn about woodcutting?"
+dialogue_text = npc_name + ": " + npc_text
 
 npc_choices = [
     {
@@ -15,14 +15,17 @@ npc_choices = [
 {
         text: "Can I have an axe?",
         action: function() {
-            array_push(global.inventory, {
-                name: "Bronze axe",
-                amount: 1,
-                sprite: spr_item_bronze_axe
-            });
+            if (inventory_has("Bronze axe")) {
+                with (obj_dialogue) {
+                    show("Woodcutting Trainer: You already have an axe.", [])
+                }
+                return;
+            }
+
+            inventory_add("Bronze axe", 1, spr_item_bronze_axe, "tool")
       
               with (obj_dialogue) {
-                  show("Woodcutting Trainer: Here, take this bronze axe.", []);
+                  show("Woodcutting Trainer: Here, take this bronze axe.", [])
               }
           }
       },
@@ -30,7 +33,7 @@ npc_choices = [
         text: "Goodbye.",
         action: function() {
             with (obj_dialogue) {
-                hide();
+                hide()
             }
         }
     }

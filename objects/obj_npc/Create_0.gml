@@ -27,3 +27,26 @@ interact = function(_player) {
         show(other.dialogue_text, other.npc_choices)
     }
 };
+
+get_context_options = function(_player) {
+    var target = id
+
+    return [
+        {
+            text: "Talk-to " + npc_name,
+            action: function() {
+                with (target) {
+                    interact(_player)
+                }
+            }
+        },
+        {
+            text: "Examine",
+            action: function() {
+                with (obj_dialogue) {
+                    show("This is " + string(target.npc_name) + ".", [])
+                }
+            }
+        }
+    ]
+}
