@@ -1,8 +1,8 @@
 {
   "FolderOrderSettings":[
-    {"name":"Objects","order":4,"path":"folders/Objects.yy",},
-    {"name":"Sprites","order":5,"path":"folders/Sprites.yy",},
-    {"name":"Rooms","order":6,"path":"folders/Rooms.yy",},
+    {"name":"Rooms","order":2,"path":"folders/Rooms.yy",},
+    {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+    {"name":"Fonts","order":4,"path":"folders/Fonts.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_dialogue","order":3,"path":"objects/obj_dialogue/obj_dialogue.yy",},

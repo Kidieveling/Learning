@@ -1,4 +1,2 @@
-move_speed = 4;
-
-talk_text = "";
-talk_timer = 0;
+depth = 0
+move_speed = 4

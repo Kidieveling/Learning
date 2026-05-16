@@ -1,8 +1,29 @@
-dialogue_text = "Fix Creation Code!"
-npc_name = "Fix npc name"
+depth = 25
+npc_name = "UPDATE"
+npc_text = "CREATION CODE"
+dialogue_text = npc_name + ": " + npc_text
+npc_choices = [
+    {
+        text: "Set this NPC up.",
+        action: function() {
+            with (obj_dialogue) {
+                show("This NPC still needs custom creation code.", [])
+            }
+        }
+    },
+    {
+        text: "Goodbye.",
+        action: function() {
+            with (obj_dialogue) {
+                hide()
+            }
+        }
+    }
+];
+
 
 interact = function(_player) {
     with (obj_dialogue) {
-        show(other.dialogue_text)
+        show(other.dialogue_text, other.npc_choices)
     }
-}
+};
