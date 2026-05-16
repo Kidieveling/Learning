@@ -9,7 +9,7 @@ if (!instance_exists(obj_dialogue)) {
 
 // add inventory GUI
 if (!instance_exists(obj_inventory)) {
-    instance_create_layer(0, 0, "Instances", obj_inventory);
+    instance_create_layer(0, 0, "Instances", obj_inventory)
 }
 
 
