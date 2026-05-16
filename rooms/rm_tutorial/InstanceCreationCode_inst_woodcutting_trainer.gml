@@ -11,15 +11,21 @@ npc_choices = [
                 show("Woodcutting Trainer: Start by finding a normal tree. Later, better trees will need higher woodcutting levels.", []);
             }
         }
-    },
-    {
+    }, 
+{
         text: "Can I have an axe?",
         action: function() {
-            with (obj_dialogue) {
-                show("Woodcutting Trainer: Soon I'll give you a starter axe. For now, this is where that reward will happen.", []);
-            }
-        }
-    },
+            array_push(global.inventory, {
+                name: "Bronze axe",
+                amount: 1,
+                sprite: spr_item_bronze_axe
+            });
+      
+              with (obj_dialogue) {
+                  show("Woodcutting Trainer: Here, take this bronze axe.", []);
+              }
+          }
+      },
     {
         text: "Goodbye.",
         action: function() {
