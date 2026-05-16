@@ -1,29 +1,19 @@
-draw_set_alpha(1);
+draw_self();
 
-// Body
-draw_set_color(make_color_rgb(63, 116, 191));
-draw_rectangle(x - 14, y - 24, x + 14, y + 12, false);
+var npc = instance_nearest(x, y, obj_npc);
 
-// Head
-draw_set_color(make_color_rgb(238, 196, 154));
-draw_circle(x, y - 34, 12, false);
+if (npc != noone && point_distance(x, y, npc.x, npc.y) < 64) {
+    draw_set_color(c_white);
+    draw_text(24, 24, "Press E to talk");
+}
 
-// Facing marker
-draw_set_color(c_white);
-draw_circle(x + facing_x * 9, y - 34 + facing_y * 9, 3, false);
+if (talk_text != "") {
+    var gui_w = display_get_gui_width();
+    var gui_h = display_get_gui_height();
 
-// Health bar
-var bar_width = 42;
-var health_percent = hp / max_hp;
+    draw_set_color(c_black);
+    draw_rectangle(32, gui_h - 120, gui_w - 32, gui_h - 32, false);
 
-draw_set_color(c_black);
-draw_rectangle(x - bar_width / 2 - 1, y - 58, x + bar_width / 2 + 1, y - 51, false);
-
-draw_set_color(c_red);
-draw_rectangle(x - bar_width / 2, y - 57, x + bar_width / 2, y - 52, false);
-
-draw_set_color(c_lime);
-draw_rectangle(x - bar_width / 2, y - 57, x - bar_width / 2 + bar_width * health_percent, y - 52, false);
-
-draw_set_color(c_white);
-draw_text(24, 24, "RPG Lesson 1: Move with WASD or arrow keys");
+    draw_set_color(c_white);
+    draw_text(48, gui_h - 96, talk_text);
+}
